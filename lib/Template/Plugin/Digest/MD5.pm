@@ -24,7 +24,6 @@ sub new {
     return bless {}, $class;
 }
 
-
 sub _md5 {
     my $options = ref $_[-1] eq 'HASH' ? pop : { };
     return md5(join('', @_));
@@ -40,12 +39,9 @@ sub _md5_base64 {
     return md5_base64(join('', @_));
 }
 
-
-
 1;
+
 __END__
-
-
 
 =head1 NAME
 
@@ -108,8 +104,6 @@ equivalent:
     content FILTER md5_hex;
     content.md5_base64;
 
-
-
 =head1 WARNING
 
 The L<Digest::MD5> man page notes that the MD5 algorithm is not as
@@ -118,7 +112,6 @@ different messages that produce the same MD5 digest.  It still seems
 hard to generate messages that produce a given digest, but it is
 probably wise to move to stronger algorithms for applications that
 depend on the digest to uniquely identify a message.
-
 
 =head1 AUTHOR
 

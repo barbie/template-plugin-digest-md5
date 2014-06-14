@@ -13,12 +13,12 @@ plan skip_all => "Test::CPAN::Meta required for testing META.yml" if $@;
 
 plan 'no_plan';
 
-my $yaml = meta_spec_ok(undef,undef,@_);
+my $meta = meta_spec_ok(undef,undef,@_);
 
 use Template::Plugin::Digest::MD5;
 my $version = $Template::Plugin::Digest::MD5::VERSION;
 
-is($yaml->{version},$version,
+is($meta->{version},$version,
     'META.yml distribution version matches');
 
 if($meta->{provides}) {

@@ -2,6 +2,7 @@ Changes
 lib/Template/Plugin/Digest/MD5.pm
 MANIFEST
 Makefile.PL
+META.json
 META.yml
 README
 t/00use.t

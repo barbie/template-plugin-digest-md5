@@ -1,5 +1,6 @@
 Changes
 lib/Template/Plugin/Digest/MD5.pm
+LICENSE
 MANIFEST
 Makefile.PL
 META.json

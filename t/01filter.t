@@ -1,4 +1,6 @@
+#!/usr/bin/perl -w
 use strict;
+
 use blib;
 use Template::Test;
 

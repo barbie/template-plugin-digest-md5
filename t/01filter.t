@@ -56,7 +56,6 @@ EnHtXvMFqtq8YFsWCeJMUg
 EnHtXvMFqtq8YFsWCeJMUg
 
 
-
 # Test the md5 filter
 --test--
 [% USE Digest.MD5; USE Dumper; FILTER md5_hex; FILTER md5 -%]
@@ -82,5 +81,3 @@ Donec pharetra, nibh nec mollis tristique, lorem turpis viverra elit, in sollici
 2555ff4001fd16a72f605e952c0c164d
 2555ff4001fd16a72f605e952c0c164d
 2555ff4001fd16a72f605e952c0c164d
-
-

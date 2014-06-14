@@ -115,7 +115,7 @@ depend on the digest to uniquely identify a message.
 
 =head1 SEE ALSO
 
-C<Digest::MD5>, L<Template>
+L<Digest::MD5>, L<Template>
 
 =head1 DEDICATION
 

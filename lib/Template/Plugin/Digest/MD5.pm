@@ -1,41 +1,42 @@
 package Template::Plugin::Digest::MD5;
 
 use strict;
+use warnings;
 use vars qw($VERSION);
 
-$VERSION = 0.03;
+$VERSION = 0.04;
 
 use base qw(Template::Plugin);
 use Template::Plugin;
 use Template::Stash;
 use Digest::MD5 qw(md5 md5_hex md5_base64);
 
-$Template::Stash::SCALAR_OPS->{'md5'}        = \&_md5;
-$Template::Stash::SCALAR_OPS->{'md5_hex'}    = \&_md5_hex;
-$Template::Stash::SCALAR_OPS->{'md5_base64'} = \&_md5_base64;
+$Template::Stash::SCALAR_OPS->{'md5'}           = \&_md5;
+$Template::Stash::SCALAR_OPS->{'md5_hex'}       = \&_md5_hex;
+$Template::Stash::SCALAR_OPS->{'md5_base64'}    = \&_md5_base64;
 
 sub new {
     my ($class, $context, $options) = @_;
 
     # now define the filter and return the plugin
-    $context->define_filter('md5',        \&_md5);
-    $context->define_filter('md5_hex',    \&_md5_hex);
-    $context->define_filter('md5_base64', \&_md5_base64);
+    $context->define_filter('md5',          \&_md5);
+    $context->define_filter('md5_hex',      \&_md5_hex);
+    $context->define_filter('md5_base64',   \&_md5_base64);
     return bless {}, $class;
 }
 
 sub _md5 {
-    my $options = ref $_[-1] eq 'HASH' ? pop : { };
+    my $options = ref $_[-1] eq 'HASH' ? pop : {};
     return md5(join('', @_));
 }
 
 sub _md5_hex {
-    my $options = ref $_[-1] eq 'HASH' ? pop : { };
+    my $options = ref $_[-1] eq 'HASH' ? pop : {};
     return md5_hex(join('', @_));
 }
 
 sub _md5_base64 {
-    my $options = ref $_[-1] eq 'HASH' ? pop : { };
+    my $options = ref $_[-1] eq 'HASH' ? pop : {};
     return md5_base64(join('', @_));
 }
 

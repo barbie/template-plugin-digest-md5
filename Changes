@@ -1,6 +1,7 @@
 Revision history for Template-Plugin-Digest-MD5
 ===============================================
 
+0.04    2014-06-24
         - new maintainer: BARBIE.
         - repackaged distribution.
         - updated META.yml, added META.json.

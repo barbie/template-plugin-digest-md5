@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                     Template-Plugin-Digest-MD5
-version:                  0.03
+version:                  0.04
 abstract:                 TT2 interface to the MD5 Algorithm
 author:
   - Barbie <barbie@cpan.org>
@@ -27,7 +27,7 @@ build_requires:
 provides:
   Template::Plugin::Digest::MD5:
     file:     lib/Template/Plugin/Digest/MD5.pm
-    version:  0.03
+    version:  0.04
 no_index:
   directory:
     - t
